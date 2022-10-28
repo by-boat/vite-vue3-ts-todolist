@@ -7,9 +7,9 @@ const counter = useCounterStore();
 const dialogVisible = ref(false);
 const childe = ref();
 const todo_list: Array<Record<string, any>> = reactive([
-  { name: "吃饭", done: false, time: "2022/12/01 00:00:00" },
-  { name: "睡觉", done: false, time: "2022/12/01 00:00:00" },
-  { name: "打游戏", done: false, time: "2022/12/01 00:00:00" },
+  { name: "吃饭", done: false, time: getDateTimeObj() },
+  { name: "睡觉", done: false, time: getDateTimeObj() },
+  { name: "打游戏", done: false, time: getDateTimeObj() },
 ]);
 const tableColumns = computed(() => [
   ...table_column_list,
@@ -71,7 +71,6 @@ function submit() {
     ElMessage.error("请输入正确的任务名称");
   }
 }
-
 </script>
 
 <template>
