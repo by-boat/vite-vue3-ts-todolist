@@ -10,6 +10,7 @@ fs.readFile(path.join(__dirname, './data.json'), (err, data) => {
   let obj = {};
   obj.a = 1;
   obj.b = 2;
+  obj.c = 3;
 
   fs.writeFile(path.join(__dirname, './data.json'), JSON.stringify(obj), (err) => {
     if (err) {
