@@ -12,6 +12,7 @@ export default defineConfig(async () => {
   const componentsAliasMap = await walk('components');
   console.log('看看', componentsAliasMap)
   return {
+    base: './',
     // 不加下面这一段，打包的时候会报警（不影响打包）
     css: {
       postcss: {
@@ -64,7 +65,7 @@ export default defineConfig(async () => {
       vueJsx(),
       viteCompression({
         filter: /\.(js|css)$/i, // 压缩文件类型
-        deleteOriginFile: true, // 压缩后删除源文件
+        // deleteOriginFile: true, // 压缩后删除源文件
       }),
       Components({//src目录下components中的文件不需要引入即可直接使用
         resolvers: [ElementPlusResolver()],
