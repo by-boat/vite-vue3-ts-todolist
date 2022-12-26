@@ -4,12 +4,13 @@
   "version": "0.0.0",
   "scripts": {
     "dev": "vite",
+    "dev:v2": "cross-env pp=2 node ./app.init.js&cross-env pp=3 node ./app.init2.js&npm run dev",
     "build": "vue-tsc --noEmit  --skipLibCheck && vite build --mode prod",
     "buildv2": "vite build",
     "preview": "vite preview"
   },
   "gitHooks": {
-    "commit-msg": "node ./test.js git add . git commit"
+    "commit-msg": "node ./test.js"
   },
   "dependencies": {
     "@vitejs/plugin-vue-jsx": "^1.3.4",
@@ -23,6 +24,7 @@
   "devDependencies": {
     "@types/node": "^17.0.4",
     "@vitejs/plugin-vue": "^2.2.0",
+    "cross-env": "^7.0.3",
     "typescript": "^4.5.4",
     "unplugin-auto-import": "^0.5.11",
     "unplugin-vue-components": "^0.17.18",

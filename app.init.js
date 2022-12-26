@@ -1,0 +1,1 @@
+console.log('run app.init.js', process.env.pp)
