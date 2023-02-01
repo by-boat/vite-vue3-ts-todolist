@@ -10,6 +10,7 @@ const todo_list: Array<Record<string, any>> = reactive([
   { name: "吃饭", done: false, time: getDateTimeObj() },
   { name: "睡觉", done: false, time: getDateTimeObj() },
   { name: "打游戏", done: false, time: getDateTimeObj() },
+  { name: "网易云", done: false, time: getDateTimeObj() },
 ]);
 const tableColumns = computed(() => [
   ...table_column_list,
