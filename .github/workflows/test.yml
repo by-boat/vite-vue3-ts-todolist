@@ -17,7 +17,7 @@ jobs:
         node-version: 12
     - name: npm install and build
       run: |
-      echo date +%Y%m%d-%H:%M:%S && echo "==========  开始构建(测试环境)  =========="
+      echo "==========  开始构建(测试环境)  =========="
         npm install
         npm run build
        echo date +%Y%m%d-%H:%M:%S && echo "==========  完成构建(测试环境)  =========="
