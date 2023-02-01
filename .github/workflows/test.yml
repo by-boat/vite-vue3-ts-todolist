@@ -11,10 +11,10 @@ jobs:
     steps:
     - name: Checkout
       uses: actions/checkout@main
-    - name: use Node.js 12
+    - name: use Node.js 14
       uses: actions/setup-node@v1
       with:
-        node-version: 12
+        node-version: 14
     - name: npm install and build
       run: |
         echo 开始构建(测试环境)
