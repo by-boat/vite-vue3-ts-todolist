@@ -7,18 +7,9 @@ on:
 
 jobs:
   build:
-    runs-on: ubuntu-latest
-    steps:
-    - name: Checkout
-      uses: actions/checkout@main
-    - name: use Node.js 12
-      uses: actions/setup-node@v1
-      with:
-        node-version: 12
-    - name: npm install and build
-      run: |
-        echo 开始构建(测试环境)
-        echo 构建完成(测试环境)
+    stage: build
+    script:
+    - echo "开始构建"
 #       env:
 #         CI: true
 # - name: Deploy to Server
