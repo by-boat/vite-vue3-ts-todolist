@@ -1,5 +1,5 @@
 name: Deploy
-# 监听 push 操做   main 分支
+# 监听 push 操做   master 分支
 on:
   push:
     branches:
@@ -16,10 +16,12 @@ jobs:
       with:
         node-version: 12
     - name: npm install and build
-      run: echo 开始构建(测试环境) && echo 构建完成(测试环境)
-      env:
-        CI: true
-    # - name: Deploy to Server
+      run: |
+        echo 开始构建(测试环境)
+        echo 构建完成(测试环境)
+#       env:
+#         CI: true
+# - name: Deploy to Server
 #   uses: easingthemes/ssh-deploy@v2.0.7
 #   env:
 #     # 本地.ssh文件下的私钥id_rsa，存在secrets的TOKEN中
